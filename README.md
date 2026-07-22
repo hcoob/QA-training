@@ -1,7 +1,7 @@
 
 # QA-training
 
-Summary:
+This is a summary:
 1. Set up the SSH key on our local machine
 2. On github we added the .pub key
 3. created a bew repo in guthub
