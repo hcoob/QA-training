@@ -20,8 +20,6 @@ Table Orders {
   order_id integer [primary key]
   customer_id integer 
   product_id integer
-  body text [note: 'Content of the post']
-  user_id integer [not null]
   notes text
   created_at timestamp
 }
