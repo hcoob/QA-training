@@ -32,5 +32,5 @@ Table Orders {
 
 Ref Customers_Orders: Customers.customer_id > Orders.customer_id 
 Ref Products_Orders: Products.product_id - Orders.product_id
-Ref Category_Products: Category.category_id > Products.category_id
+Ref Category_Products: Category.category_id < Products.category_id 
 Ref Customers_Address: Customers.customer_id > Address.customer_id 
