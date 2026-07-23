@@ -5,6 +5,12 @@ Table Customers {
   email varchar
 }
 
+Table Address {
+  adress_id integer [primary key]
+  customer_id integer
+  adress varchar
+}
+
 Table Products {
   product_id integer [primary key]
   product_name varchar
@@ -26,4 +32,5 @@ Table Orders {
 
 Ref Customers_Orders: Customers.customer_id > Orders.customer_id 
 Ref Products_Orders: Products.product_id > Orders.order_id 
-Ref Category_Products: Category.category_id > Products.category_id 
+Ref Category_Products: Category.category_id > Products.category_id
+Ref Customers_Address: Customers.customer_id > Address.customer_id 
