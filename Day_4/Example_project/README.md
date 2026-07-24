@@ -40,7 +40,8 @@ Sprint_5:
 Threats:
 - Security and compliance due to PII
 
-
 Future development
 - API could be integrated with a dashboard
 - Users could dowload data
+
+The database functionality is not working. 
