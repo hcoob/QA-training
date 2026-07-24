@@ -47,12 +47,10 @@ def home():
 
 @app.get("/testresults")
 def test_results():
-    with engine.connect as conn:
-        result  = conn.execute("select * from TestResult")
-        rows = [dict(row._mappimng) for row in result]
-    return {"table": table_name,
-            "count": len(rows),
-            "data": rows}
-    
+    conn = sqlite3.connect(sqlite_db)
+    result  = conn.execute("select * from TestResult").fetchall()
+    conn.close()
 
-conn.close()
+    return [dict(r) for r in result]
+
+
